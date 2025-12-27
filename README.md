@@ -184,9 +184,55 @@ sns.kdeplot(data=tips,x='total_bill',hue='time',multiple='fill',linewidth=3,pale
 
 output <img width="984" height="595" alt="image" src="https://github.com/user-attachments/assets/10cb05ee-9f4d-4c91-84da-b79a5a95d2bf" />
 
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+mart = pd.read_csv("supermarket.csv")
+mart
 
+output <img width="1354" height="664" alt="image" src="https://github.com/user-attachments/assets/b602011d-3382-41bb-8397-45320d94d591" />
 
+mart=mart[['Gender','Payment','Unit price','Quantity','Total','gross income']]
+mart.head(10)
 
+output <img width="843" height="384" alt="image" src="https://github.com/user-attachments/assets/92b84296-6347-40a6-909d-e83b1832c3e5" />
+
+sns.kdeplot(data=mart, x='Total')
+
+output <img width="1114" height="577" alt="image" src="https://github.com/user-attachments/assets/4e1922a0-4099-49d8-a117-591f6e2ad083" />
+
+sns.kdeplot(data=mart, x='Unit price')
+
+output <img width="1021" height="588" alt="image" src="https://github.com/user-attachments/assets/f30dae5e-83e4-41b0-8025-082e7bee29ec" />
+
+sns.kdeplot(data=mart)
+
+output <img width="1030" height="567" alt="image" src="https://github.com/user-attachments/assets/f1be6295-136d-44c3-8eb3-dea7fe3b028f" />
+
+sns.kdeplot (data=mart, x='Total',hue='Payment',multiple='stack')
+
+output <img width="1087" height="593" alt="image" src="https://github.com/user-attachments/assets/c52e4811-201e-4c29-a096-905ec03bc475" />
+
+sns.kdeplot(data=mart, x='Unit price' ,y='gross income' )
+
+output <img width="1112" height="585" alt="image" src="https://github.com/user-attachments/assets/b3b86779-4181-4e80-a03f-3058061e5463" />
+
+data = np.random.randint(low = 1,high = 100,size = (10,10))
+print("The data to be plotted: \n")
+print(data)
+
+output <img width="1046" height="282" alt="image" src="https://github.com/user-attachments/assets/37c991ff-56d0-4d3b-985d-4d915dd53505" />
+
+hm = sns.heatmap(data = data)
+
+output <img width="977" height="533" alt="image" src="https://github.com/user-attachments/assets/a09f4188-4b7b-4348-a696-b941f129db3d" />
+
+hm = sns.heatmap(data = data, annot=True)
+
+output <img width="847" height="531" alt="image" src="https://github.com/user-attachments/assets/b2cc5323-640a-4407-b179-64a731458a89" />
 
 # Result:
- Include your result here
+
+ Thus, the program to Perform Data Visualization using seaborn python library for the given data was 
+implemented.
